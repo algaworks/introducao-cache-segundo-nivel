@@ -35,7 +35,7 @@ public class HibernateCidades implements Cidades {
 
 	@Override
 	public List<Cidade> buscarCidadesPorEstado(Estado estado) {
-		return this.manager.createQuery("from Cidade c where c.estado = :estado", 	Cidade.class)
+		return this.manager.createQuery("from Cidade c where c.estado = :estado", Cidade.class)
 						.setParameter("estado", estado).getResultList();
 	}
 
